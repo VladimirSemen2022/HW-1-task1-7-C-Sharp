@@ -47,7 +47,7 @@ namespace HW_1_C_Sharp
                 hwt = int.Parse(Console.ReadLine());
                     switch (hwt)
                     {
-                        case 1://Задание 1 Вывести определенный текст при числе кратном 3, 5 или и 3 и 5
+                        case 1://Задание 1. Вывести определенный текст при числе кратном 3, 5 или и 3 и 5
                             Console.WriteLine("Enter a positive integer number from 1 to 100");
                             int a = int.Parse(Console.ReadLine());
                             if (a >= 1 && a <= 100)
@@ -64,14 +64,18 @@ namespace HW_1_C_Sharp
                             else
                                 Console.WriteLine("You entered the wrong number!");
                             break;
-                        case 2://Задание 2 Вычислить процент от числа
+
+
+                        case 2://Задание 2. Вычислить процент от числа
                             Console.WriteLine("Enter any number");
                             double a1 = double.Parse(Console.ReadLine());
                             Console.WriteLine("Input a number of percent you want to take from before entered number");
                             int perc = int.Parse(Console.ReadLine());
                             Console.WriteLine($"{Math.Abs(perc)}% from number {a1} = {a1 * Math.Abs(perc) / 100}");
                             break;
-                        case 3://Задание 3 Создать число из 4 введенных цифр
+
+
+                        case 3://Задание 3. Создать число из 4 введенных цифр
                             Console.WriteLine("Enter four any numbers");
                             string num1 = Console.ReadLine();
                             string num2 = Console.ReadLine();
@@ -80,7 +84,9 @@ namespace HW_1_C_Sharp
                             a = int.Parse(num1 + num2 + num3 + num4);
                             Console.WriteLine(a);
                         break;
-                        case 4://Задание 4 Обмен цифрами в двух разрядах шестизначного числа
+
+
+                        case 4://Задание 4. Обмен цифрами в двух разрядах шестизначного числа
                             Console.WriteLine("Enter a six-digit positive integer number");
                             num1 = Console.ReadLine();
                             if (num1.Length == 6)
@@ -99,7 +105,9 @@ namespace HW_1_C_Sharp
                             else
                                 Console.WriteLine("You entered no six-digit number! Repeat one more time.");
                         break;
-                        case 5://Задание 5 Показать сезон и день недели по введеной дате
+
+
+                        case 5://Задание 5. Показать сезон и день недели по введеной дате
                             string [] weekday = { "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
                             string [] seasons = {"Winter", "Spring", "Summer", "Autumn"};
                             int[] kodOfMonth = { 1, 4, 4, 0, 2, 5, 0, 3, 6, 1, 4, 6};
@@ -118,7 +126,9 @@ namespace HW_1_C_Sharp
                             int kodOfWeekday = (day + kodOfMonth[month - 1] + kodOfYear) % 7;
                             Console.WriteLine($"Season - {seasons[kodOfSeason]} and day of week - {weekday[(leapYear == 1 && kodOfWeekday == 0)? 6 : kodOfWeekday - leapYear]}");
                         break;
-                        case 6://Задание 6 Преобразования температуры из Цельсия в Фаренгейт и наоборот
+
+
+                        case 6://Задание 6. Преобразования температуры из Цельсия в Фаренгейт и наоборот
                             Console.WriteLine("Enter temperature");
                             double temper = double.Parse(Console.ReadLine());
                             Console.WriteLine("Input zero if you want to convert temperature from Celsius to Fahrenheit or any other number for reverse conversion");
@@ -128,7 +138,9 @@ namespace HW_1_C_Sharp
                             else
                                 Console.WriteLine($"{temper}°F = {(temper-32)*5/9}°C");
                         break;
-                        case 7://Задание 7 Вывести все четные числа между двумя заданными числами
+
+
+                        case 7://Задание 7. Вывести все четные числа между двумя заданными числами
                             Console.WriteLine("Input two positive integers number and you see all even numbers between them on the screen");
                             a = Math.Abs(int.Parse(Console.ReadLine()));
                             int c = Math.Abs(int.Parse(Console.ReadLine()));
@@ -143,6 +155,7 @@ namespace HW_1_C_Sharp
                                 Console.WriteLine($"{i}");
                             }
                         break;
+
                         case 0://Выйти из программы
                         continue;
                     default:
